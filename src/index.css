@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme inline{
+  --color-primay1: var(--primary-color);
+  --color-button1: var(--button-color);
+  --color-secondary1: var(--secondary-color);
+  --font-project: 'Epilogue', sans-serif;
+}
+:root{
+  --primary-color:hsl(0, 0%, 98%);
+  --button-color:hsl(0, 0%, 8%);
+  --secondary-color:hsl(0, 0%, 41%);
+}
+@layer{
+  body{
+    @apply bg-primay1 text-secondary1;
+  }
+  .rg-btn{
+    transition: scale 0.9s ease-in-out;
+  }
+  .reg-btn:hover{
+    scale: 1.05;
+  }
+  .reg-btn:active{
+    animation: reduce 0.7s ease-in-out;
+  }
+  @keyframes reduce{
+    from{
+      transform: scale(1.05);
+    }
+    to{
+      transform: scale(0.90);
+    }
+  }
+}
